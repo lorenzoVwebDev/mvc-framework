@@ -7,7 +7,7 @@ $dotenv = Dotenv::createImmutable(__DIR__. '/../../');
 $dotenv->load();
 
 if ($_SERVER['SERVER_NAME'] == 'development-server-name') {
-  define('LOGS', __DIR__."\\..\\..\\". "logs");
+  define('LOGS', __DIR__."//..//..//". "logs");
   define('ROOT', 'http://logs-table-reader-mvc/');
   define('DBHOST', 'localhost');
   define('DBNAME', 'lorenzo1');

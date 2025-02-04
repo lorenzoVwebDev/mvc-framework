@@ -7,6 +7,7 @@ class Logs_array_model {
 
   function arrayException() {
     if (file_exists(LOGS."//exceptions//".date('mdy').".log")) {
+      print "arrayException works";
       $logFile = fopen(LOGS."//exceptions//".date('mdy').".log", "r");
       $error_array[0] = array(
         0 => 'Date',
@@ -48,8 +49,8 @@ class Logs_array_model {
   }
 
   function arrayAccess() {
-    if (file_exists(LOGS."\\access\\".date('mdy').".log")) {
-      $logFile = fopen(LOGS."\\access\\".date('mdy').".log", "r");
+    if (file_exists(LOGS."//access//".date('mdy').".log")) {
+      $logFile = fopen(LOGS."//access//".date('mdy').".log", "r");
       $error_array[0] = array(
         0 => 'Date',
         1 => 'Type',

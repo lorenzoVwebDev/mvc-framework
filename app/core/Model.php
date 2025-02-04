@@ -7,8 +7,8 @@ class Model {
   
   function logEvent($log_message, $log_type, $log_event = 'write') {
     try {
-      if (file_exists(__DIR__ ."//..//models//logs.model.php")) {
-        require_once(__DIR__ ."//..//models//logs.model.php");
+      if (file_exists(__DIR__ ."//..//models//mapping//logs.model.php")) {
+        require_once(__DIR__ ."//..//models//mapping//logs.model.php");
 
         $event_log = new Logs_model($log_message, $log_type);
         if ($log_event === 'write') {
@@ -35,7 +35,7 @@ class Model {
         throw new Exception('logs.model.php not found');
       } 
     } catch (Exception $e) {
-      require_once(__DIR__ ."//..//models//logs.model.php");
+      require_once(__DIR__ ."//..//models//mapping//logs.model.php");
       $exception = new Logs_model($e->getMessage(), 'exception');
       $exception->logException();
       return $e;
@@ -60,7 +60,7 @@ class Model {
         throw new Exception('logs_array.model.php not found');
       } 
     } catch (Exception $e) {
-      require_once(__DIR__ ."//..//models//logs.model.php");
+      require_once(__DIR__ ."//..//models//mapping//logs.model.php");
       $exception = new Logs_model($e->getMessage(), 'exception');
       $exception->logException();
       return $e->getMessage();

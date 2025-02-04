@@ -106,7 +106,7 @@ class Logs extends Controller {
         $type = $_GET['type'];
         $model = new Model();
         $event_array = $model->logsArray($type);
-        if ($event_array === "log file not found" && $event_array === 'logs_array.model.php not found') {
+        if ($event_array === "log file not found" || $event_array === 'logs_array.model.php not found') {
           throw new Exception($event_array, 500);
         } else {
           if (file_exists(__DIR__."//..//views//table.view.php")) {
