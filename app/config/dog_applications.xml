@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications>
+    <application>
+        <type ID='model1'>
+            <location></location>
+        </type>
+    </application>
+    <application>
+        <type ID='model2'>
+            <location></location>
+        </type>
+    </application>
+    <application>
+        <type ID='model3'>
+            <location></location>
+        </type>
+    </application>
+</applications>
